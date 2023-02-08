@@ -33,7 +33,7 @@ Pour information voir aussi :
   - [MySQL](#mysql)
   - [NGINX](#nginx)
   - [Xdebug](#xdebug)
-- [Reinstall](#reinstall)
+- [Réinstallation](#réinstallation)
 
 ## Installation
 
