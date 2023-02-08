@@ -141,11 +141,11 @@ make xdebug.on
 make xdebug.off
 ```
 
-### PHPStorm + Xdebug
+### EDI (PHPStorm,ETC.) + Xdebug
 
-Xdebug 3's default port is `9003`.
+Le port par défaut de Xdebug 3 est `9003`.
 
-Go to `File > Settings > Languages & Frameworks > PHP > Servers`
+Allez à `File > Settings > Languages & Frameworks > PHP > Servers`
 
 - Name: `localhost`
 - Host: `localhost`
@@ -153,9 +153,8 @@ Go to `File > Settings > Languages & Frameworks > PHP > Servers`
 - Debugger: `Xdebug`
 - Use path mappings: `Enable`
 
-Map your project's app directory to the absolute path on the docker container `/srv/app`
+Définissez le répertoire de l'application de votre projet sur le chemin absolu du conteneur Docker `/srv/app`
 
-## Reinstall
+## Réinstallation
 
-To completely reinstall delete existing containers and images, then remove the `app/` directory and run `make init`
-again.
+Pour réinstaller complètement, supprimez les conteneurs et les images existants, puis supprimez le répertoire `app/` et exécutez à nouveau make `init`.
