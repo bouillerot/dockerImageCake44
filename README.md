@@ -21,7 +21,7 @@ Pour information voir aussi :
 
 | Service                | Host:Port      | Docker Host | Image                                                                                        |
 |------------------------|----------------|-------------|----------------------------------------------------------------------------------------------|
-| PHP8.1-FPM w/ Xdebug 3 | -              | php         | [bouillerot/dockerImageCake44](https://github.com/bouillerot/dockerImageCake44) |
+| PHP8.1-FPM w/ Xdebug 3 | -              | php         | [php:8.1-fpm-alpine](https://hub.docker.com/layers/library/php/8.1-fpm-alpine/images/sha256-e9918a21a522a45c61772c9b81df0250997d8e3b2681c6961288749c60f22632) |
 | NGINX 1.19             | localhost:8080 | web         | [nginx:1.19-alpine](https://hub.docker.com/_/nginx)                                          |
 | MySQL 8                | localhost:3607 | db          | [library/mysql:8](https://hub.docker.com/_/mysql)                                            |
 
