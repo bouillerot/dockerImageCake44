@@ -1,22 +1,23 @@
 # &#128011; Docker
 
-It's expected that you will use your own Dockerfile for production.
+Je me suis fortement inspiré de [cnizzardini/cakephp-docker](https://github.com/cnizzardini/cakephp-docker).
+Bien entendu nous avons notre propre Dockerfile pour notre production.
 
 ## NGINX
 
-See [nginx](nginx) directory for configurations. These get loaded as a docker-compose volume.
+Voir les configurations dans le répertoire [nginx](nginx).
+Elles sont chargées en tant que volume docker-compose.
 
 ## MySQL
 
-Environment variables are loaded by docker-compose from [mysql.env.development](mysql.env.development).
+Les variables d'environnement sont chargées par docker-compose depuis [mysql.env.development](mysql.env.development).
 
 ## PHP
 
-See [php](php) for PHP related configuration files, healthcheck, and entrypoint.
+Voir le répertoire [php](php) pour les fichiers de configuration liés à PHP, `healthcheck` et `entrypoint`.
 
-The [php/development/conf.d/20-overrides.ini.development](php/development/conf.d/20-overrides.ini.development) file is
-used a base config to populate the git ignored
-[php/development/conf.d/20-overrides.ini](php/development/conf.d/20-overrides.ini). The latter is actually loaded
-by PHP. This is to allow for easily toggling xdebug on and off via the Makefile.
+Le fichier [php/development/conf.d/20-overrides.ini.development](php/development/conf.d/20-overrides.ini.development) est utilisé comme configuration de base pour remplir le git ignoré [php/development/conf.d/20-overrides.ini](php/development/conf.d/20-overrides.ini).
+Ce dernier est en fait chargé par PHP.
+Cela permet d'activer et de désactiver facilement xdebug via le Makefile.
 
-Environment variables are loaded by docker-compose from [php.env.development](php.env.development).
+Les variables d'environnement sont chargées par docker-compose depuis [php.env.development](php.env.development).
