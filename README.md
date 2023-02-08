@@ -90,7 +90,7 @@ Veuillez consulter le Makefile car ces commandes ne sont pas des alias exacts de
 
 ### PHP
 
-See [.docker/README.md](.docker/README.md) for details.
+Se reporter à [.docker/README.md](.docker/README.md) pour les details.
 
 Shell:
 
@@ -98,7 +98,7 @@ Shell:
 make php.sh
 ```
 
-Helper commands:
+Commandes d'assistance :
 
 ```console
 make composer.install
