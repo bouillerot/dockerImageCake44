@@ -124,7 +124,7 @@ make db.mysql
 
 ### NGINX
 
-See [.docker/README.md](.docker/README.md) for details.
+Se reporter à [.docker/README.md](.docker/README.md) pour les details.
 
 Shell:
 
