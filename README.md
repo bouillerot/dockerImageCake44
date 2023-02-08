@@ -134,7 +134,7 @@ make web.sh
 
 ### Xdebug
 
-Xdebug is disabled by default. To toggle:
+Xdebug est inactif par défaut. Pour basculer :
 
 ```console
 make xdebug.on
