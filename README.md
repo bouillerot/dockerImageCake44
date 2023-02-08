@@ -43,8 +43,14 @@ Fourchez et clonez ce référentiel, puis exécutez:
 make init
 ```
 
-C'est tout ! Maintenant retirez simplement `app/*` de [.gitignore](.gitignore). Vous pouvez également supprimer
-[.assets](.assets) et ajuster les valeurs par défaut [.github](.github), [.docker](.docker) et [.kube](.kube).
+C'est tout !
+
+Maintenant retirez simplement `app/*` de [.gitignore](.gitignore).
+
+Vous pouvez également supprimer :
+- [.assets](.assets)
+- ajuster les valeurs par défaut pour :
+  - [.github](.github), [.docker](.docker) et [.kube](.kube).
 
 > Note : `make init` et `make init.nocache` interagissent avec l'utilisateur, mais pas `make start` et `make up`.
 
