@@ -74,6 +74,7 @@ COMP_CHECK      := docker exec $(PHP) composer check
 # help
 #
 help:
+	@clear
 	@printf "\n"
 	@printf $(CAKEPHP_ICO) && printf "$(RED) CakePHP Docker (infoGestion) $(S)"
 	@printf "$(LIGHTPURPLE) https://github.com/bouillerot/dockerImageCake44 $(E)\n"
