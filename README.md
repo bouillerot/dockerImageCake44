@@ -1,6 +1,6 @@
 # &#127856; CakePHP Docker
 
-[![Build](https://github.com/bouillerot/dockerImageCake44/workflows/Build/badge.svg?branch=master)](https://github.com/bouillerot/dockerImageCake44/actions)
+[![Build](https://github.com/bouillerot/dockerImageCake44/workflows/Build/badge.svg?branch=master)](https://github.com/bouillerot/dockerImageCake44)
 [![CakePHP](https://img.shields.io/badge/cakephp-4-red?logo=cakephp)](https://book.cakephp.org/4/en/index.html)
 [![Docker](https://img.shields.io/badge/docker-ffffff.svg?logo=docker)](.docker)
 [![Kubernetes](https://img.shields.io/badge/kubernetes-D3D3D3.svg?logo=kubernetes)](.kube)
