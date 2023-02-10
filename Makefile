@@ -85,7 +85,6 @@ help:
 	@printf "$(LIGHTPURPLE) https://github.com/bouillerot/dockerImageCake44 $(E)\n"
 	@printf " commande \t\t description $(E)"
 	@printf " -------- \t\t ----------- $(E)"
-	@printf ">$(TAG)<"
 	@printf "$(INFO) make init $(RESET)\t\t construit et monte tous les conteneurs $(E)"
 	@printf "$(INFO) make init.nocache $(RESET)\t idem sans le cache $(E)"
 	@printf "\n"
