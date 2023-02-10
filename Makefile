@@ -31,6 +31,10 @@ endif
 #
 DOCKER_COMPOSE  := "docker-compose.yml"
 PHP             := $(shell docker-compose  ps -q php)
+WEB             := $(shell docker-compose  ps -q web)
+DB              := $(shell docker-compose  ps -q db)
+IDU             := $(shell id -u)
+UNAME           := $(shell uname -s)
 PHP_DEV_PATH	:= ".docker/php/development"
 
 #
@@ -63,9 +67,9 @@ DC_STOP         := docker-compose stop
 DC_UP           := docker-compose up
 DC_DOWN         := docker-compose down
 PHP_SH          := docker exec -it --user cakephp $(PHP) sh
-DB_SH           := docker exec -it $(shell docker-compose ps -q db) sh
+DB_SH           := docker exec -it $(DB) sh
 MYSQL_SH        := mysql -u root -h 0.0.0.0 -p --port 3307
-WEB_SH          := docker exec -it $(shell docker-compose ps -q web) sh
+WEB_SH          := docker exec -it $(WEB) sh
 COMP_INSTALL    := docker exec $(PHP) composer install --no-interaction --no-plugins --no-scripts --prefer-dist
 COMP_TEST       := docker exec $(PHP) composer test
 COMP_CHECK      := docker exec $(PHP) composer check
@@ -108,12 +112,12 @@ help:
 init: do.copy
 	@printf $(DOCKER_ICO) && printf "$(GOOD)running docker build and up $(E)"
 	@mkdir -p app && touch app/.gitkeep
-	@docker-compose build --build-arg UID=$(shell id -u) --build-arg ENV=dev --build-arg HOST_OS=$(shell uname -s)
+	@docker-compose build --build-arg UID=$(IDU) --build-arg ENV=dev --build-arg HOST_OS=$(UNAME)
 	@$(DC_UP)
 init.nocache: do.copy
 	@printf $(DOCKER_ICO) && printf "$(GOOD)running docker build --no-cache and up $(E)"
 	@mkdir -p app && touch app/.gitkeep
-	@docker-compose build --build-arg UID=$(shell id -u) --build-arg ENV=dev --no-cache --build-arg HOST_OS=$(shell uname -s)
+	@docker-compose build --build-arg UID=$(IDU) --build-arg ENV=dev --no-cache --build-arg HOST_OS=$(UNAME)
 	@$(DC_UP)
 
 #
