@@ -35,6 +35,7 @@ WEB             := $(shell docker-compose  ps -q web)
 DB              := $(shell docker-compose  ps -q db)
 IDU             := $(shell id -u)
 UNAME           := $(shell uname -s)
+TAGDATE         := $(shell date +%Y%m%d%H%M%S)
 PHP_DEV_PATH	:= ".docker/php/development"
 
 #
@@ -84,6 +85,7 @@ help:
 	@printf "$(LIGHTPURPLE) https://github.com/bouillerot/dockerImageCake44 $(E)\n"
 	@printf " commande \t\t description $(E)"
 	@printf " -------- \t\t ----------- $(E)"
+	@printf ">$(TAG)<"
 	@printf "$(INFO) make init $(RESET)\t\t construit et monte tous les conteneurs $(E)"
 	@printf "$(INFO) make init.nocache $(RESET)\t idem sans le cache $(E)"
 	@printf "\n"
