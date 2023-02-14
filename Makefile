@@ -94,6 +94,7 @@ help:
 	@printf "$(INFO) make down $(RESET)\t\t stoppe / retire les conteneurs, réseaux et volumes $(E)"
 	@printf "$(INFO) make restart $(RESET)\t\t redémarre les conteneurs $(E)"
 	@printf "$(INFO) make php.restart $(RESET)\t Redémarre le conteneur PHP $(E)"
+	@printf "$(INFO) make web.restart $(RESET)\t Redémarre le conteneur WEB $(E)"
 	@printf "\n"
 	@printf "$(INFO) make php.sh $(RESET)\t\t CLI du conteneur php $(E)"
 	@printf "$(INFO) make db.sh $(RESET)\t\t CLI du conteneur db $(E)"
@@ -144,6 +145,11 @@ php.restart:
 	@$(DC_STOP) php
 	@cp .docker/php.env.development .docker/php.env
 	@$(DC_START) php
+web.restart:
+	@printf $(DOCKER_ICO) && printf "$(GOOD)restart $(S) php $(CMD) $(DC_STOP) php $(CMD) $(DC_START) php $(E)"
+	@$(DC_STOP) web
+# @cp .docker/php.env.development .docker/php.env
+	@$(DC_START) web
 
 #
 # container shell commands
