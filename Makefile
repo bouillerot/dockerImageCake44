@@ -96,7 +96,7 @@ help:
 	@printf "$(INFO) make php.restart $(RESET)\t Redémarre le conteneur PHP $(E)"
 	@printf "$(INFO) make web.restart $(RESET)\t Redémarre le conteneur WEB $(E)"
 	@printf "\n"
-	@printf "$(INFO) make php.sh $(RESET)\t\t CLI du conteneur php $(E)"
+	@printf "$(INFO) make php.sh $(RESET)\t\t CLI du conteneur php pour effectuer toute commade CLI style bin/cake bake ... ou migrations $(E)"
 	@printf "$(INFO) make db.sh $(RESET)\t\t CLI du conteneur db $(E)"
 	@printf "$(INFO) make web.sh $(RESET)\t\t CLI du conteneur web $(E)"
 	@printf "$(INFO) make db.mysql $(RESET)\t\t console mysql $(E)"
