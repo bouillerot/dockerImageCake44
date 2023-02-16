@@ -37,6 +37,8 @@ Pour information voir aussi :
 
 ## Installation
 
+Suivi détallé voir [SuiviInstallation.md](SuiviInstallation.md)
+
 Fourchez et clonez ce référentiel, puis exécutez:
 
 ```console
