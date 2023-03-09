@@ -13,6 +13,7 @@ services:
       - ./app:/srv/app
       - ./.docker/php/development:/usr/local/etc/php
       - ~/.ssh/:/home/root/.ssh
+      - vscode-extensions:/home/phpdev/.vscode-server/extensions
     depends_on:
       - db
 
@@ -25,8 +26,8 @@ services:
     restart: always
     env_file:
       - ./.docker/mysql.env.development
-    # volumes:
-      # - data:/var/lib/mysql
+    volumes:
+      - data:/var/lib/mysql
     ports:
       - "3307:3306"
 
@@ -44,3 +45,6 @@ services:
       - php
 volumes:
   data:
+    driver: local
+  vscode-extensions:
+    driver: local
